@@ -48,11 +48,15 @@ sudo ./deploy.sh
 ### 管理
 
 ```bash
+./start.sh                # 启动全部服务（nohup 后台，日常启动用这个）
 ./stop.sh                 # 停止全部服务
+./status.sh               # 查看服务状态 + 端口 + 健康检查
 tail -f logs/backend.log  # 查看后端日志
 tail -f logs/agent.log    # 查看 Agent 日志
 tail -f logs/frontend.log # 查看前端日志
 ```
+
+> **日常使用**：首次部署用 `./deploy.sh`（含安装/构建）。之后重启服务只用 `./start.sh`（不重装依赖、不重新构建，秒起）。
 
 ### 已知限制
 
