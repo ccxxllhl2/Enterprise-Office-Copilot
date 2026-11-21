@@ -8,13 +8,32 @@ cd "$ROOT"
 
 echo "========== [1/6] 检测 Python 与 Node =========="
 
-# Python >= 3.10
-if ! command -v python3 >/dev/null 2>&1; then
-    echo "未检测到 python3，请先安装: sudo apt install -y python3 python3-venv python3-pip"
-    exit 1
+# 需要 Python >= 3.11（fastapi 0.165 要求）
+PY_BIN=""
+for cand in python3.12 python3.11 python3.13 python3.14 python3; do
+    if command -v "$cand" >/dev/null 2>&1; then
+        VER=$("$cand" -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
+        MAJOR=$("$cand" -c 'import sys; print(sys.version_info.major)')
+        MINOR=$("$cand" -c 'import sys; print(sys.version_info.minor)')
+        if [ "$MAJOR" -gt 3 ] || { [ "$MAJOR" -eq 3 ] && [ "$MINOR" -ge 11 ]; }; then
+            PY_BIN="$cand"
+            PY_VER="$VER"
+            break
+        fi
+    fi
+done
+
+if [ -z "$PY_BIN" ]; then
+    echo "未找到 Python >= 3.11，自动安装 Python 3.12（deadsnakes PPA）..."
+    apt-get update
+    apt-get install -y software-properties-common
+    add-apt-repository -y ppa:deadsnakes/ppa
+    apt-get update
+    apt-get install -y python3.12 python3.12-venv
+    PY_BIN="python3.12"
+    PY_VER=$($PY_BIN -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
 fi
-PY_VER=$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
-echo "Python 版本: $PY_VER"
+echo "Python: $PY_BIN ($PY_VER)"
 
 # Node >= 22.19（Pi Agent 要求）
 NEED_NODE=0
@@ -36,8 +55,16 @@ fi
 echo "Node 版本: $(node -v)"
 
 echo "========== [2/6] 创建 Python 虚拟环境 =========="
+# 若已有 venv 但 Python 版本不符，则重建
+if [ -d .venv ]; then
+    VENV_VER=$(.venv/bin/python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")' 2>/dev/null || echo "0.0")
+    if [ "$VENV_VER" != "$PY_VER" ]; then
+        echo "旧 venv 版本 $VENV_VER 与 $PY_VER 不符，重建..."
+        rm -rf .venv
+    fi
+fi
 if [ ! -d .venv ]; then
-    python3 -m venv .venv
+    $PY_BIN -m venv .venv
 fi
 # 用清华源安装后端依赖
 .venv/bin/pip install -r backend/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple

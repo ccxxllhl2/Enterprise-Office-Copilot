@@ -8,8 +8,17 @@
 
 ### 前置条件
 
-- Ubuntu 服务器（18.04+ 均可）
+- Ubuntu 服务器（**Python ≥ 3.11 必需**，脚本会自动检测/安装）
 - 可访问外网（脚本自动从国内源下载依赖）
+
+> **Python 版本要求**：后端依赖 fastapi 0.165 要求 Python ≥ 3.11。
+> Ubuntu 20.04（默认 3.8）/ 22.04（默认 3.10）不满足，脚本会通过 deadsnakes PPA 自动安装 Python 3.12。
+> 若 PPA 访问慢，可手动用 miniconda（清华镜像）安装 Python 3.12：
+> ```bash
+> curl -fsSL https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh -o /tmp/mc.sh
+> bash /tmp/mc.sh -b -p /opt/miniconda
+> /opt/miniconda/bin/python -m venv .venv
+> ```
 
 ### 部署步骤
 
@@ -18,7 +27,7 @@
 
 # 2. 安装系统基础依赖（如未装）
 sudo apt update
-sudo apt install -y python3 python3-venv python3-pip curl xz-utils lsof
+sudo apt install -y curl xz-utils lsof ca-certificates
 
 # 3. 确认 .env 配置（关键！）
 #    DEEPSEEK_API=sk-xxxx   ← 必须填真实 token（当前是占位符）
