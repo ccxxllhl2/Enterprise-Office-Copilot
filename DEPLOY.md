@@ -1,76 +1,71 @@
-# 云端部署说明（Docker）
+# 云端部署说明
 
-## 架构
+推荐方式：**直接部署**（无需 Docker，全部国内源，最快）。备选：Docker。
 
-```
-┌──────────────────────────────────────┐
-│  frontend (nginx, 80)                 │
-│  ├─ /api/chat    → agent-service:3000 │
-│  ├─ /api/agents  → agent-service:3000 │
-│  ├─ /api/*       → backend:8080       │
-│  └─ 静态资源（React 构建产物）          │
-└──────────────────────────────────────┘
-        │                    │
-   backend (8080)      agent-service (3000)
-   FastAPI + SQLite     Pi Agent + DeepSeek
-```
+---
 
-## 前置条件
+## 方式一：直接部署（推荐，国内源）
 
-1. Ubuntu 服务器已安装 Docker Engine + Docker Compose
-2. 项目上传到服务器（排除 `node_modules/`、`.venv/`、`data/*.db`）
+### 前置条件
 
-## 部署步骤
+- Ubuntu 服务器（18.04+ 均可）
+- 可访问外网（脚本自动从国内源下载依赖）
+
+### 部署步骤
 
 ```bash
-# 1. 进入项目目录
-cd Enterprise-Office-Copilot
+# 1. 上传项目到服务器（可排除 node_modules/、.venv/、data/*.db）
 
-# 2. 确认 .env 配置正确（关键！）
-#    DEEPSEEK_API=sk-xxxx   ← 必须填真实 DeepSeek Token（当前是占位符）
-#    RAG_API_KEY=...         ← 阿里百炼 RAG Key
-#    RAG_AGENT_ID=...        ← 检索服务 ID
-#    OUTLOOK_MAIL_CLIENT_ID=...  ← Outlook 应用 ID
+# 2. 安装系统基础依赖（如未装）
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip curl xz-utils lsof
 
-# 3. 构建并启动
+# 3. 确认 .env 配置（关键！）
+#    DEEPSEEK_API=sk-xxxx   ← 必须填真实 token（当前是占位符）
+#    RAG_API_KEY=... / RAG_AGENT_ID=... / OUTLOOK_MAIL_CLIENT_ID=...
+
+# 4. 一键部署（脚本自动：装 Node22 + venv + 依赖 + 构建 + 启动）
+chmod +x deploy.sh stop.sh
+sudo ./deploy.sh
+```
+
+脚本使用国内源：pip 清华源、npm npmmirror、Node 二进制 npmmirror。
+
+### 访问
+
+- 前端：`http://<服务器IP>`（80 端口，需 root 或开放端口）
+- 后端健康检查：`http://<服务器IP>:8080/api/health`
+
+### 管理
+
+```bash
+./stop.sh                 # 停止全部服务
+tail -f logs/backend.log  # 查看后端日志
+tail -f logs/agent.log    # 查看 Agent 日志
+tail -f logs/frontend.log # 查看前端日志
+```
+
+### 已知限制
+
+Outlook 邮件拉取/发送首次需设备码认证：
+
+```bash
+# 邮件拉取认证
+cd /path/to/project
+node node_modules/@hazzajenko/outlook-mail-mcp/dist/cli.js auth
+
+# 邮件发送认证
+cd backend && ../.venv/bin/python -m app.outlook_auth
+```
+
+认证后 token 缓存在 `~/.config/outlook-mail/`。
+
+---
+
+## 方式二：Docker 部署（备选）
+
+```bash
 docker compose up -d --build
-
-# 4. 查看状态
-docker compose ps
-
-# 5. 查看日志
-docker compose logs -f
 ```
 
-## 访问
-
-浏览器打开 `http://<服务器IP>`（默认 80 端口）。
-
-## 数据持久化
-
-- SQLite 数据库挂载到宿主机 `./data/`，容器重建不丢数据。
-
-## 已知限制（需在容器内手动认证）
-
-Outlook 邮件的**拉取**（outlook-mail CLI）和**发送**（Graph API）使用设备码认证，
-token 缓存在容器内 `~/.config/outlook-mail/`，首次部署需进入容器重新认证：
-
-```bash
-# 邮件拉取认证（outlook-mail CLI）
-docker compose exec backend node /app/node_modules/@hazzajenko/outlook-mail-mcp/dist/cli.js auth
-# 按提示访问 https://www.microsoft.com/link 输入验证码
-
-# 邮件发送认证（msal）
-docker compose exec backend python -m app.outlook_auth
-# 按提示访问 https://www.microsoft.com/link 输入验证码
-```
-
-> 建议：认证后将容器内 token 缓存目录挂载到宿主机持久化。
-
-## 常用命令
-
-```bash
-docker compose down          # 停止
-docker compose logs backend  # 查看后端日志
-docker compose restart       # 重启全部
-```
+> 国内镜像构建慢时，可在各 Dockerfile 内将 pip/npm/apt 源替换为国内镜像。
