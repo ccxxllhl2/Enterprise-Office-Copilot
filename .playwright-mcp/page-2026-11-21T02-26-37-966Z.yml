@@ -1,0 +1,55 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - heading "Office Copilot" [level=1] [ref=e5]
+    - navigation [ref=e6]:
+      - button "邮件助手" [ref=e7] [cursor=pointer]
+      - button "会议助手" [ref=e8] [cursor=pointer]
+      - button "知识助手" [ref=e9] [cursor=pointer]
+      - button "报告助手" [ref=e10] [cursor=pointer]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - heading "邮件助手" [level=2] [ref=e13]
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - textbox "粘贴邮件内容…" [ref=e16]: Hi team, please review the Q3 report and send me your feedback by Friday.
+          - generic [ref=e17]:
+            - text: 回复语气：
+            - combobox [ref=e18]:
+              - option "正式" [selected]
+              - option "友好"
+              - option "简洁"
+          - button "生成摘要" [ref=e19] [cursor=pointer]
+          - button "生成回复草稿" [ref=e20] [cursor=pointer]
+        - generic [ref=e49]: 摘要： 1. 请团队审阅第三季度报告。 2. 周五前将反馈发送给我。 3. 邮件为英文团队通知。
+      - generic [ref=e21]:
+        - heading "历史记录" [level=3] [ref=e22]
+        - generic [ref=e51]:
+          - heading "#7 · 正式" [level=4] [ref=e52]
+          - generic [ref=e53]: Hi team, please review the Q3 report and send me your feedback by Friday.…
+          - generic [ref=e54]: 摘要：1. 请团队审阅第三季度报告。 2. 周五前将反馈发送给我。 3. 邮件为英文团队通知。
+        - generic [ref=e23]:
+          - heading "#6 · 正式" [level=4] [ref=e24]
+          - generic [ref=e25]: Please review the attached Q3 budget and reply by EOD.…
+          - generic [ref=e26]: 摘要：1. 请查阅附件中的第三季度预算。 2. 请在今日下班前回复。 3. 邮件要求审阅并反馈。
+        - generic [ref=e27]:
+          - heading "#5 · 正式" [level=4] [ref=e28]
+          - generic [ref=e29]: 邮件正文…
+          - generic [ref=e30]: 摘要：摘要
+          - generic [ref=e31]: 回复：回复
+        - generic [ref=e32]:
+          - heading "#4 · 正式" [level=4] [ref=e33]
+          - generic [ref=e34]: Hi team, please review the Q3 report and send feedback by Friday.…
+          - generic [ref=e35]: 摘要：1. 请团队审阅第三季度报告。 2. 周五前提交反馈意见。 3. 邮件为英文团队通知。
+        - generic [ref=e36]:
+          - heading "#3 · 正式" [level=4] [ref=e37]
+          - generic [ref=e38]: Hi team, please review the Q3 report and send feedback by Friday.…
+          - generic [ref=e39]: 摘要：1. 请团队审阅第三季度报告。 2. 周五前提交反馈意见。 3. 邮件为英文团队通知。
+        - generic [ref=e40]:
+          - heading "#2 · ??" [level=4] [ref=e41]
+          - generic [ref=e42]: Hi team, please review the Q3 report and send feedback by Friday.…
+          - generic [ref=e43]: 摘要：1. 请团队审阅第三季度报告。 2. 周五前提交反馈意见。 3. 请按时完成审阅与反馈。
+        - generic [ref=e44]:
+          - heading "#1 · 正式" [level=4] [ref=e45]
+          - generic [ref=e46]: 邮件正文…
+          - generic [ref=e47]: 摘要：摘要
+          - generic [ref=e48]: 回复：回复

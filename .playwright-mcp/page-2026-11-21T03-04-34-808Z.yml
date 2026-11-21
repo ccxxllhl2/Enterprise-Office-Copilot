@@ -1,0 +1,19 @@
+- generic [ref=f8e3]:
+  - complementary [ref=f8e4]:
+    - heading "Office Copilot" [level=1] [ref=f8e5]
+    - navigation [ref=f8e6]:
+      - button "Agent Chat" [ref=f8e7] [cursor=pointer]
+      - button "邮件助手" [ref=f8e8] [cursor=pointer]
+      - button "会议助手" [ref=f8e9] [cursor=pointer]
+      - button "知识助手" [ref=f8e10] [cursor=pointer]
+      - button "报告助手" [ref=f8e11] [cursor=pointer]
+  - main [ref=f8e12]:
+    - generic [ref=f8e13]:
+      - heading "Agent Chat" [level=2] [ref=f8e14]
+      - generic [ref=f8e15]:
+        - generic [ref=f8e16]: 你好，我是邮件助手 Agent。你可以让我：查收邮件、读邮件、发邮件、生成摘要、起草回复。
+        - generic [ref=f8e21]: 帮我查看已发送邮件
+        - generic [ref=f8e23]: "已发送文件夹共有 **6 封邮件**，按时间从新到旧排列如下： | # | 主题 | 发件人 | 时间 | 附件 | |---|------|--------|------|------| | 1 | Agent 发送测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 03:03 | 无 | | 2 | UI 检查测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 02:51 | 无 | | 3 | UI 发送测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 02:48 | 无 | | 4 | [Copilot] 发送功能测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 02:47 | 无 | | 5 | AI项目会议 | Cho Jackal (outlook_BCB2051761D76461@outlook.com) | 2025-02-07 08:11 | 无 | | 6 | PPT | Cao Jackal (ccxxll23@163.com) | 2022-05-23 15:11 | 有附件 | 简要说明： - 前 4 封是近期功能测试邮件，分别验证 Agent、React 前端、UI 层面的发送功能。 - 第 5 封是 Teams 会议邀请（会议 ID: 934 727 798 072 5，密码: qG36bX）。 - 第 6 封是 2022 年的一封带附件邮件，主题为“PPT”，正文为空。 需要我打开某一封查看全文，或对其中某封起草回复吗？"
+      - generic [ref=f8e18]:
+        - textbox "例如：给 ccxxll23@163.com 发一封主题为「测试」的邮件…" [ref=f8e19]
+        - button "发送" [disabled] [ref=f8e20]

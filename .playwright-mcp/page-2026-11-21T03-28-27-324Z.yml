@@ -1,0 +1,34 @@
+- generic [ref=f10e3]:
+  - complementary [ref=f10e4]:
+    - heading "Office Copilot" [level=1] [ref=f10e5]
+    - navigation [ref=f10e6]:
+      - button "Agent Chat" [ref=f10e7] [cursor=pointer]
+      - button "邮件助手" [ref=f10e8] [cursor=pointer]
+      - button "会议助手" [ref=f10e9] [cursor=pointer]
+      - button "知识助手" [ref=f10e10] [cursor=pointer]
+      - button "报告助手" [ref=f10e11] [cursor=pointer]
+  - main [ref=f10e12]:
+    - generic [ref=f10e21]:
+      - heading "邮件助手" [level=2] [ref=f10e22]
+      - generic [ref=f10e23]:
+        - generic [ref=f10e24]:
+          - generic [ref=f10e25]:
+            - heading "写邮件" [level=4] [ref=f10e26]
+            - textbox "收件人邮箱" [ref=f10e27]
+            - textbox "主题" [ref=f10e28]
+            - textbox "正文" [ref=f10e29]
+            - button "发送" [disabled] [ref=f10e30]
+          - generic [ref=f10e31]:
+            - button "收件箱" [ref=f10e32] [cursor=pointer]
+            - button "已发送" [ref=f10e33] [cursor=pointer]
+            - button "草稿" [ref=f10e34] [cursor=pointer]
+          - generic [ref=f10e35]: （该文件夹暂无邮件）
+        - generic [ref=f10e37]: 点击左侧邮件查看全文
+      - generic [ref=f10e39]:
+        - heading "🤖 Agent 助手" [level=4] [ref=f10e40]
+        - generic [ref=f10e41]:
+          - generic [ref=f10e46]: 查看已发送邮件
+          - generic [ref=f10e48]: "已发送文件夹共 7 封邮件，列表如下（按时间倒序）： | # | 主题 | 发件人 | 时间 | 附件 | |---|------|--------|------|------| | 1 | UI Agent 测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 03:04 | 无 | | 2 | Agent 发送测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 03:03 | 无 | | 3 | UI 检查测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 02:51 | 无 | | 4 | UI 发送测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 02:48 | 无 | | 5 | [Copilot] 发送功能测试 | Cho Jackal (ccxxll23@163.com) | 2026-11-21 02:47 | 无 | | 6 | AI项目会议 | Cho Jackal (outlook_BCB2051761D76461@outlook.com) | 2025-02-07 08:11 | 无 | | 7 | PPT | Cao Jackal (ccxxll23@163.com) | 2022-05-23 15:11 | 有 | 预览内容简述： 1. 「这是通过 Agent Chat 界面发送的测试。」 2. 「这是通过 Pi Agent 对话发送的测试邮件。」 3. 「这是一封 UI 层面检查发送的测试邮件。」 4. 「这是从 React 前端发出的测试邮件。」 5. 「这是一封来自 Enterprise Office Copilot 的测试邮件。」 6. Teams 会议邀请（会议 ID 934 727 798 072 5） 7. 无正文，带 1 个附件 需要我读取某封邮件的全文，或对它们做汇总摘要吗？"
+        - generic [ref=f10e43]:
+          - textbox "例如：查看收件箱邮件 / 给 xx 发邮件…" [ref=f10e44]
+          - button "发送" [disabled] [ref=f10e45]

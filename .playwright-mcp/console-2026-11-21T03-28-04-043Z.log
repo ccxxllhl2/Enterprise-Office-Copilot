@@ -1,0 +1,3 @@
+[      49ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost/node_modules/.vite/deps/chunk-HCIN4FJ4.js?v=ddf1a001:21607
+[  172267ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost/src/App.jsx?t=1795231856305:1
+[  172267ms] [ERROR] [vite] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost/@vite/client:882

@@ -1,0 +1,3 @@
+[      49ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost/node_modules/.vite/deps/chunk-HCIN4FJ4.js?v=ddf1a001:21607
+[    8796ms] [ERROR] Access to fetch at 'http://localhost:3000/api/chat' from origin 'http://localhost' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'http://localhost:80' that is not equal to the supplied origin. Have the server send the header with a valid value. @ http://localhost/:1
+[    8796ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/chat:1

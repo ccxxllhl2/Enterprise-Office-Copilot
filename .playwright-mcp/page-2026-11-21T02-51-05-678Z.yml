@@ -1,0 +1,58 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e4]:
+    - heading "Office Copilot" [level=1] [ref=f6e5]
+    - navigation [ref=f6e6]:
+      - button "邮件助手" [ref=f6e7] [cursor=pointer]
+      - button "会议助手" [ref=f6e8] [cursor=pointer]
+      - button "知识助手" [ref=f6e9] [cursor=pointer]
+      - button "报告助手" [ref=f6e10] [cursor=pointer]
+  - main [ref=f6e11]:
+    - generic [ref=f6e12]:
+      - heading "邮件助手" [level=2] [ref=f6e13]
+      - generic [ref=f6e14]:
+        - generic [ref=f6e15]:
+          - generic [ref=f6e16]:
+            - heading "写邮件" [level=4] [ref=f6e17]
+            - textbox "收件人邮箱" [ref=f6e18]
+            - textbox "主题" [ref=f6e19]
+            - textbox "正文" [ref=f6e20]
+            - button "发送" [disabled] [ref=f6e21]
+            - generic [ref=f6e57]: ✓ 已发送
+          - generic [ref=f6e22]:
+            - button "收件箱" [ref=f6e23] [cursor=pointer]
+            - button "已发送" [ref=f6e24] [cursor=pointer]
+            - button "草稿" [ref=f6e25] [cursor=pointer]
+          - generic [ref=f6e26]:
+            - generic [ref=f6e30] [cursor=pointer]:
+              - heading "UI 发送测试" [level=4] [ref=f6e31]
+              - generic [ref=f6e32]: Cho Jackal
+              - generic [ref=f6e33]: 2026-11-21T02:48:33Z
+            - generic [ref=f6e34] [cursor=pointer]:
+              - heading "[Copilot] 发送功能测试" [level=4] [ref=f6e35]
+              - generic [ref=f6e36]: Cho Jackal
+              - generic [ref=f6e37]: 2026-11-21T02:47:39Z
+            - generic [ref=f6e38] [cursor=pointer]:
+              - heading "AI项目会议" [level=4] [ref=f6e39]
+              - generic [ref=f6e40]: Cho Jackal
+              - generic [ref=f6e41]: 2025-02-07T08:11:15Z
+            - generic [ref=f6e42] [cursor=pointer]:
+              - heading "PPT" [level=4] [ref=f6e43]
+              - generic [ref=f6e44]: Cao Jackal
+              - generic [ref=f6e45]: 2022-05-23T15:11:56Z
+        - generic [ref=f6e28]:
+          - generic [ref=f6e46]:
+            - text: AI项目会议
+            - generic [ref=f6e47]: 发件人：Cho Jackal <outlook_BCB2051761D76461@outlook.com>
+            - generic [ref=f6e48]: 时间：2025-02-07T08:11:15Z
+            - separator [ref=f6e49]
+            - generic [ref=f6e50]: "________________________________________________________________________________ Microsoft Teams 会议 使用电脑、移动应用或会议室设备加入 单击此处以加入会议<https://teams.live.com/meet/9347277980725?p=msn5zbaoZe9sbZoMYd> 会议 ID: 934 727 798 072 5 密码: qG36bX 下载 Teams<https://www.microsoft.com/en-us/microsoft-teams/download-app> | 在 web 上加入<https://www.microsoft.com/microsoft-teams/join-a-meeting> 了解更多<https://aka.ms/JoinTeamsMeeting> | 会议选项<https://teams.live.com/meetingOptions/meetings/9347277980725/view?localeCode=zh-CN> ________________________________________________________________________________ 回复和日历答复将不会发送给组织者"
+          - generic [ref=f6e51]:
+            - text: 回复语气：
+            - combobox [ref=f6e52]:
+              - option "正式" [selected]
+              - option "友好"
+              - option "简洁"
+          - button "生成摘要" [ref=f6e53] [cursor=pointer]
+          - button "生成回复草稿" [ref=f6e54] [cursor=pointer]
+          - generic [ref=f6e55]: 摘要： 1. 邮件为 Microsoft Teams 会议邀请，含加入链接。 2. 会议 ID 为 934 727 798 072 5，密码 qG36bX。 3. 可通过电脑、移动应用或会议室设备加入。
+          - generic [ref=f6e56]: 回复草稿： 尊敬的会议组织者： 您好！ 感谢您发送本次Microsoft Teams会议的邀请及相关信息。我已收到会议链接、会议ID及密码，并将按照通知准时参加本次会议。 如会议时间、议程或参会方式有任何调整，请及时告知，以便我做好相应安排。 感谢您的组织与安排。 此致 敬礼 [您的姓名] [您的职位] [日期]

@@ -1,0 +1,38 @@
+- generic [ref=f13e3]:
+  - banner [ref=f13e4]:
+    - heading "Enterprise Office Copilot" [level=1] [ref=f13e5]
+    - generic [ref=f13e6]:
+      - button "💬 Agent Chat" [ref=f13e7] [cursor=pointer]
+      - button "⚙️ Admin" [active] [ref=f13e8] [cursor=pointer]
+  - main [ref=f13e9]:
+    - generic [ref=f13e18]:
+      - complementary [ref=f13e19]:
+        - heading "管理" [level=2] [ref=f13e20]
+        - navigation [ref=f13e21]:
+          - button "邮件助手" [ref=f13e22] [cursor=pointer]
+          - button "会议助手" [ref=f13e23] [cursor=pointer]
+          - button "知识助手" [ref=f13e24] [cursor=pointer]
+          - button "报告助手" [ref=f13e25] [cursor=pointer]
+      - main [ref=f13e26]:
+        - generic [ref=f13e27]:
+          - heading "邮件助手" [level=2] [ref=f13e28]
+          - generic [ref=f13e29]:
+            - generic [ref=f13e30]:
+              - generic [ref=f13e31]:
+                - heading "写邮件" [level=4] [ref=f13e32]
+                - textbox "收件人邮箱" [ref=f13e33]
+                - textbox "主题" [ref=f13e34]
+                - textbox "正文" [ref=f13e35]
+                - button "发送" [disabled] [ref=f13e36]
+              - generic [ref=f13e37]:
+                - button "收件箱" [ref=f13e38] [cursor=pointer]
+                - button "已发送" [ref=f13e39] [cursor=pointer]
+                - button "草稿" [ref=f13e40] [cursor=pointer]
+              - generic [ref=f13e41]: （该文件夹暂无邮件）
+            - generic [ref=f13e43]: 点击左侧邮件查看全文
+          - generic [ref=f13e45]:
+            - heading "🤖 Agent 助手" [level=4] [ref=f13e46]
+            - generic [ref=f13e47]: （用自然语言与该助手对话）
+            - generic [ref=f13e49]:
+              - textbox "例如：查看收件箱邮件 / 给 xx 发邮件…" [ref=f13e50]
+              - button "发送" [disabled] [ref=f13e51]

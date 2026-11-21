@@ -1,0 +1,46 @@
+- generic [ref=f13e3]:
+  - banner [ref=f13e4]:
+    - heading "Enterprise Office Copilot" [level=1] [ref=f13e5]
+    - generic [ref=f13e6]:
+      - button "💬 Agent Chat" [ref=f13e7] [cursor=pointer]
+      - button "⚙️ Admin" [ref=f13e8] [cursor=pointer]
+  - main [ref=f13e9]:
+    - generic [ref=f13e18]:
+      - complementary [ref=f13e19]:
+        - heading "管理" [level=2] [ref=f13e20]
+        - navigation [ref=f13e21]:
+          - button "邮件助手" [ref=f13e22] [cursor=pointer]
+          - button "会议助手" [ref=f13e23] [cursor=pointer]
+          - button "知识助手" [ref=f13e24] [cursor=pointer]
+          - button "报告助手" [active] [ref=f13e25] [cursor=pointer]
+      - main [ref=f13e26]:
+        - generic [ref=f13e52]:
+          - heading "报告助手" [level=2] [ref=f13e53]
+          - generic [ref=f13e55]:
+            - textbox "报告标题" [ref=f13e56]: 工作简报
+            - button "Choose File" [ref=f13e58]
+            - textbox "粘贴待汇总内容，或上传 PDF/Excel 自动解析填入…" [ref=f13e59]
+            - button "生成报告" [disabled] [ref=f13e60]
+          - generic [ref=f13e61]:
+            - heading "历史报告" [level=3] [ref=f13e62]
+            - generic [ref=f13e63]:
+              - heading "项目周报" [level=4] [ref=f13e64]
+              - generic [ref=f13e65]: "# 项目周报 ## 一、本周完成工作 - 完成邮件助手开发 - 完成知识助手开发 ## 二、下周工作计划 - 完成会议助手开发 - 完成报告助手开发 ## 三、风险与问题 - 时间紧张…"
+            - generic [ref=f13e66]:
+              - heading "标题" [level=4] [ref=f13e67]
+              - generic [ref=f13e68]: 内容…
+            - generic [ref=f13e69]:
+              - heading "标题" [level=4] [ref=f13e70]
+              - generic [ref=f13e71]: 内容…
+            - generic [ref=f13e72]:
+              - heading "标题" [level=4] [ref=f13e73]
+              - generic [ref=f13e74]: 内容…
+            - generic [ref=f13e75]:
+              - heading "标题" [level=4] [ref=f13e76]
+              - generic [ref=f13e77]: 内容…
+          - generic [ref=f13e78]:
+            - heading "🤖 Agent 助手" [level=4] [ref=f13e79]
+            - generic [ref=f13e80]: （用自然语言与该助手对话）
+            - generic [ref=f13e82]:
+              - textbox "例如：把以下内容汇总成一份报告…" [ref=f13e83]
+              - button "发送" [disabled] [ref=f13e84]

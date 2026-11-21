@@ -1,0 +1,41 @@
+- generic [ref=f2e3]:
+  - complementary [ref=f2e4]:
+    - heading "Office Copilot" [level=1] [ref=f2e5]
+    - navigation [ref=f2e6]:
+      - button "邮件助手" [ref=f2e7] [cursor=pointer]
+      - button "会议助手" [ref=f2e8] [cursor=pointer]
+      - button "知识助手" [ref=f2e9] [cursor=pointer]
+      - button "报告助手" [ref=f2e10] [cursor=pointer]
+  - main [ref=f2e11]:
+    - generic [ref=f2e12]:
+      - heading "邮件助手" [level=2] [ref=f2e13]
+      - generic [ref=f2e14]:
+        - generic [ref=f2e15]:
+          - generic [ref=f2e16]:
+            - button "收件箱" [ref=f2e17] [cursor=pointer]
+            - button "已发送" [ref=f2e18] [cursor=pointer]
+            - button "草稿" [ref=f2e19] [cursor=pointer]
+          - generic [ref=f2e20]:
+            - generic [ref=f2e24] [cursor=pointer]:
+              - heading "AI项目会议" [level=4] [ref=f2e25]
+              - generic [ref=f2e26]: Cho Jackal
+              - generic [ref=f2e27]: 2025-02-07T08:11:15Z
+            - generic [ref=f2e28] [cursor=pointer]:
+              - heading "PPT" [level=4] [ref=f2e29]
+              - generic [ref=f2e30]: Cao Jackal
+              - generic [ref=f2e31]: 2022-05-23T15:11:56Z
+        - generic [ref=f2e22]:
+          - generic [ref=f2e32]:
+            - text: AI项目会议
+            - generic [ref=f2e33]: 发件人：Cho Jackal <outlook_BCB2051761D76461@outlook.com>
+            - generic [ref=f2e34]: 时间：2025-02-07T08:11:15Z
+            - separator [ref=f2e35]
+            - generic [ref=f2e36]: "________________________________________________________________________________ Microsoft Teams 会议 使用电脑、移动应用或会议室设备加入 单击此处以加入会议<https://teams.live.com/meet/9347277980725?p=msn5zbaoZe9sbZoMYd> 会议 ID: 934 727 798 072 5 密码: qG36bX 下载 Teams<https://www.microsoft.com/en-us/microsoft-teams/download-app> | 在 web 上加入<https://www.microsoft.com/microsoft-teams/join-a-meeting> 了解更多<https://aka.ms/JoinTeamsMeeting> | 会议选项<https://teams.live.com/meetingOptions/meetings/9347277980725/view?localeCode=zh-CN> ________________________________________________________________________________ 回复和日历答复将不会发送给组织者"
+          - generic [ref=f2e37]:
+            - text: 回复语气：
+            - combobox [ref=f2e38]:
+              - option "正式" [selected]
+              - option "友好"
+              - option "简洁"
+          - button "生成摘要" [ref=f2e39] [cursor=pointer]
+          - button "生成回复草稿" [ref=f2e40] [cursor=pointer]

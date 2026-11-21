@@ -1,0 +1,11 @@
+[      53ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost/node_modules/.vite/deps/chunk-HCIN4FJ4.js?v=ddf1a001:21607
+[    2150ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `KnowledgePage`.  
+    at div
+    at KnowledgePage (http://localhost/src/pages/KnowledgePage.jsx:22:35)
+    at main
+    at div
+    at App (http://localhost/src/App.jsx?t=1795230208244:33:31) @ http://localhost/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=ddf1a001:62
+[  453966ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost/src/api/agent.js?t=1795231646765:1
+[  453968ms] [ERROR] [vite] Failed to reload /src/pages/AgentChatPage.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost/@vite/client:882

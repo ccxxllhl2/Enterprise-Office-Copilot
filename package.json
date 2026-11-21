@@ -1,0 +1,13 @@
+{
+  "name": "enterprise-office-copilot",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "outlook:auth": "outlook-mail auth",
+    "outlook:folders": "outlook-mail folders",
+    "outlook:search": "outlook-mail search"
+  },
+  "dependencies": {
+    "@hazzajenko/outlook-mail-mcp": "^0.2.0"
+  }
+}

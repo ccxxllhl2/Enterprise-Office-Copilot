@@ -1,0 +1,25 @@
+- generic [ref=f9e3]:
+  - complementary [ref=f9e4]:
+    - heading "Office Copilot" [level=1] [ref=f9e5]
+    - navigation [ref=f9e6]:
+      - button "Agent Chat" [ref=f9e7] [cursor=pointer]
+      - button "邮件助手" [ref=f9e8] [cursor=pointer]
+      - button "会议助手" [ref=f9e9] [cursor=pointer]
+      - button "知识助手" [active] [ref=f9e10] [cursor=pointer]
+      - button "报告助手" [ref=f9e11] [cursor=pointer]
+  - main [ref=f9e12]:
+    - generic [ref=f9e21]:
+      - heading "知识助手" [level=2] [ref=f9e22]
+      - generic [ref=f9e24]:
+        - textbox "输入问题…" [ref=f9e25]
+        - button "提问" [disabled] [ref=f9e26]
+      - generic [ref=f9e27]:
+        - heading "本地知识库" [level=3] [ref=f9e28]
+        - button "Choose File" [ref=f9e29]
+        - button "上传文档" [ref=f9e30] [cursor=pointer]
+        - generic [ref=f9e31]:
+          - heading "Ansible.pdf" [level=4] [ref=f9e32]
+          - generic [ref=f9e33]: D:\class\Yeslab\Cisco2026\3天课程\project\Enterprise-Office-Copilot\data\Ansible.pdf
+        - generic [ref=f9e34]:
+          - heading "README.md" [level=4] [ref=f9e35]
+          - generic [ref=f9e36]: D:\class\Yeslab\Cisco2026\3天课程\project\Enterprise-Office-Copilot\Temp\README.md
